@@ -9,10 +9,12 @@ window.addEventListener( "load", function() {
         let astroDiv = document.createElement( "div" );
         astroDiv.className = "astronaut";
 
+        let infoDiv = document.createElement( "div" );
+
         let astroH3 = document.createElement( "h3" );
         let text = document.createTextNode(`${astronaut.firstName} ${astronaut.lastName}`);
         astroH3.appendChild( text );
-        astroDiv.appendChild( astroH3 );
+        infoDiv.appendChild( astroH3 );
 
         let ul = document.createElement( "ul" );
         let li = document.createElement( "li" );
@@ -30,13 +32,14 @@ window.addEventListener( "load", function() {
         li.appendChild( text );
         ul.appendChild( li );
         
-        astroDiv.appendChild( ul );
+        infoDiv.appendChild( ul );
 
         let img = document.createElement( "img" );
         img.src = astronaut.picture;
         img.className = "avatar";
-        astroDiv.appendChild( img );
    
+        astroDiv.appendChild( infoDiv );
+        astroDiv.appendChild( img );
         container.appendChild( astroDiv );
       }
     });
